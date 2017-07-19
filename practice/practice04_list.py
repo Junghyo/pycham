@@ -2,9 +2,9 @@
  # list
  동적배열(Dynamic Array)
  list 안의 요소(element)들은 그 값을 자유롭게 변경할 수 있는 Mutable type
+ list = [element1, element2, ...., elementn]
 """
 # how to make list?
-# list = [element1, element2, ...., elementn]
 ex1 = [1, 2, 3, 4, 5]
 ex2 = []
 print(ex1)  # [1, 2, 3, 4, 5]
@@ -242,3 +242,19 @@ print(a)  # [1, 2, 3, 4, 5]
 
 b = [1, 2, 3]
 print(b + [4, 5])   # [1, 2, 3, 4, 5]
+
+# 5. list comprehension : for loop를 이용해서 반복적으로 expression(표현식)을 실행해서
+#                        list element를 정의하는 특별한 방법
+# 형식 : list = [표현식 for 요소 in 컬렉션[if 조건식]]
+print("=" * 50)
+print("5. list comprehension")
+print("=" * 50)
+
+# 0~9 숫자들 중 3으로 나눈 나머지가 0인 숫자에 제곱을 더하여 list를 만든다.
+ex = [n ** 2 for n in range(10) if n % 3 == 0]
+print(ex)   # [0, 9, 36, 81]
+
+player = ["ronaldo", "messi", "rooney"]
+# player 이름 뒤에 "-soccer"를 붙인 list를 만든다.
+ex1 = [p + "-soccer" for p in player]
+print(ex1)
