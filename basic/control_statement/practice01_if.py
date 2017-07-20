@@ -1,5 +1,5 @@
 """
- if statement
+ if( conditional statement )
 
  if 조건문:
      수행할 문장1
