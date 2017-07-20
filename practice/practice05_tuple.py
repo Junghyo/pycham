@@ -3,6 +3,8 @@
  list와 다른 점 : 새로운 element를 추가하거나 갱신, 삭제하는 일을 할 수 없다.
  Immutable type
  tuple = (element1, element2, ...., elementn)
+ () 생략 가능
+ tuple = element1, ....., elementn
 """
 
 # how to make tuple?
