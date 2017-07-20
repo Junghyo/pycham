@@ -1,6 +1,7 @@
 """
  Dictionary (dict)
  키(Key) - 값(Value)" 쌍을 요소로 갖는 collection.(like Java map)
+ Unordered, index 사용불가(index 대신 value나 key로 출력)
  key : Immutable type
  value : Immutable, Mutable type(possible)
  dict = {key1: value1, key2: value2, ....., keyn: valuen}
