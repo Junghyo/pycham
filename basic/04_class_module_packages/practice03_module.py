@@ -33,4 +33,4 @@ print(mod2.sum(mod2.pi, 4.4))
 
 import sys
 print(sys.path) # python library가 설치된 directory를 보여줌
-# sys.path.append("C:/pycharm/basic/myModules") # moudle 폴더 추가
+sys.path.append("C:/pycharm/basic/myModules")
