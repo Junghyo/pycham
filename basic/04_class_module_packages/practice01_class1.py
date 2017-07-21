@@ -367,7 +367,7 @@ class HouseSmith(HousePark):
     def __add__(self, other):
         print("%s married %s" % (self.fullname, other.fullname))
     def fight(self, other):
-        print("%s is figthing with %s" % (self.fullname, other.fullname))
+        print("%s is fighting with %s" % (self.fullname, other.fullname))
     def __sub__(self, other):
         print("%s divorced %s" % (self.fullname, other.fullname))
 
@@ -378,5 +378,5 @@ print(person3.fullname) # Sam Smith
 person3.travel("Busan", "Yoda") # Sam Smith is traveling Busan with Yoda
 person3.love(person2)   # Sam Smith is going out with Jisung Park
 person3+person2     # Sam Smith married Jisung Park
-person3.fight(person2)  # Sam Smith is figthing with Jisung Park
+person3.fight(person2)  # Sam Smith is fighting with Jisung Park
 person3-person2 # Sam Smith divorced Jisung Park
