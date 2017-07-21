@@ -140,7 +140,7 @@ a[1] = 4
 print(a)    # [1, 4, 3]
 print(b)    # [1, 2, 3]
 
-# 2. copy module 이용 : from copy import copy 선언
+# 2. copy module1 이용 : from copy import copy 선언
 
 a = [1, 2, 3]
 b = copy(a)
