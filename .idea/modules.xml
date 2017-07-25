@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\pycharm\.idea\pycham.iml" filepath="C:\pycharm\.idea\pycham.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/pycharm.iml" filepath="$PROJECT_DIR$/.idea/pycharm.iml" />
     </modules>
   </component>
