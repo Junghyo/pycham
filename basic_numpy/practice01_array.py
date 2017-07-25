@@ -7,14 +7,14 @@ Created on 2017-07-25 11:43
 '''
 
 """
- using using_numpy array
+ using basic_numpy array
  
  array
  1. 모든 원소가 같은 자료형이어야 한다.
  2. 원소의 갯수를 바꿀 수 없다.
 """
 
-### using_numpy package import
+### basic_numpy package import
 import numpy as np
 
 """
