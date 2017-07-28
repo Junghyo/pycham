@@ -10,7 +10,7 @@ from mymod.print import *
 import numpy as np
 import pandas as pd
 
-# chuncksize : 로딩할 때 한번에 읽어 올 데이터 건수
+# chuncksize : 로딩할 때 한번에 읽어 올 데이터 건수.
 p = pd.read_csv("good.csv", header=None, chunksize=2)
 print(p)
 

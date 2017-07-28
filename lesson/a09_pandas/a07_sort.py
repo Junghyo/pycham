@@ -17,7 +17,7 @@ import pandas as pd
  
     1) sort_index() : index로 정렬 처리. axis=1 대입시 열 단위
     
-    2) 기본은 오름차순 정렬
+    2) 기본은 오름차순 정렬.
        내림차순 정렬시 ascending=False
     
     3) Series객체 : sort_values()

@@ -1,7 +1,7 @@
 '''
 Created on 2017-07-28 15:44
 
-@ product name : PyCharm Community Edition
+@ product name : PyCharm Community Edition.
 
 @ author : yoda
 '''

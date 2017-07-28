@@ -15,7 +15,7 @@ import pandas as pd
  
  1. index나 컬럼이 2 level 이상으로 이루어진 경우(2차원 배열)
  2. 그룹화 연산에 유용
- 3. 집계함수 level index나 컬럼 이름 대입, axis 축방향 댕비 설정
+ 3. 집계함수 level index나 컬럼 이름 대입, axis 축방향 댕비 설정.
 """
 
 np.random.seed(0)

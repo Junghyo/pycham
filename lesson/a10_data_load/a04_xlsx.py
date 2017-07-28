@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 import csv
 
-# sheetname=: sheet 지정
+# sheetname=: sheet 지정.
 f = pd.read_excel("z03_excel.xlsx", sheetname="z02_excel")
 print(f)
 

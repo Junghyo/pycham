@@ -13,7 +13,7 @@ import pandas as pd
 """
  statistics method
  
- 1. axis : 계산방향. 0 - 행, 1 - 열
+ 1. axis : 계산방향. 0 - 행, 1 - 열.
  
  2. skipna : NaN값이 있는 경우 제외여부. T/F
  

@@ -20,7 +20,7 @@ import pandas as pd
  
  3. 데이터의 각각의 내용을 적용 - applymap 이용
  
- 4. Series에 적용할 때, map 이용
+ 4. Series에 적용할 때, map 이용.
         
 """
 

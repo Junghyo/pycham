@@ -19,7 +19,7 @@ df = pd.DataFrame(a, index = ["다음", "네이버", "넥슨", "NC"],
                   columns=[["7월", "7월", "8월", "8월"],["28일", "31일", "1일", "2일"]])
 print(df)
 
-# 컬럼명 변경
+# 컬럼명 변경.
 df.columns.names = ["month", "day"]
 print(df)
 

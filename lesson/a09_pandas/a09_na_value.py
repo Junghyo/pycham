@@ -15,7 +15,7 @@ import pandas as pd
  
  1. isnull() : NaN 이나 False --> True ? False
  
- 2. notnull() : isnull()의 반대
+ 2. notnull() : isnull()의 반대.
  
  3. dropna(how = , thresh = )
         how = all : 컬럼의 모든 값이 NaN인 경우만 제외
