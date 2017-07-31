@@ -35,4 +35,3 @@ con = pms.connect(host="localhost",
                   charset="UTF8")
 print("connect :", con)
 con.close()
-
