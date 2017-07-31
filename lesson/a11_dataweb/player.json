@@ -1,0 +1,67 @@
+	[
+		{ "name" : "Keylor Navas",
+		  "position" : "GK",
+		  "birth" : "1986.12.15",
+		  "uniformNumber" : "1"
+		},
+		{ "name" : "Dani Carvajal",
+		  "position" : "DF",
+		  "birth" : "1992.01.11",
+		  "uniformNumber" : "2"
+		},
+		{ "name" : "Pepe",
+		  "position" : "DF",
+		  "birth" : "1983.02.26",
+		  "uniformNumber" : "3"
+		},
+		{ "name" : "Sergio Ramos",
+		  "position" : "DF",
+		  "birth" : "1986.03.30",
+		  "uniformNumber" : "4"
+		},
+		{ "name" : "Raphaël Varane",
+		  "position" : "DF",
+		  "birth" : "1993.04.25",
+		  "uniformNumber" : "5"
+		},
+		{ "name" : "Cristiano Ronaldo",
+		  "position" : "FW",
+		  "birth" : "1985.02.05",
+		  "uniformNumber" : "7"
+		},
+		{ "name" : "Toni Kroos",
+		  "position" : "MF",
+		  "birth" : "1990.01.04",
+		  "uniformNumber" : "8"
+		},
+		{ "name" : "Karim Benzema",
+		  "position" : "FW",
+		  "birth" : "1987.12.19",
+		  "uniformNumber" : "9"
+		},	
+		{ "name" : "James Rodríguez",
+		  "position" : "MF",
+		  "birth" : "1991.07.12",
+		  "uniformNumber" : "10"
+		},	
+		{ "name" : "Gareth Bale",
+		  "position" : "FW",
+		  "birth" : "1989.07.16",
+		  "uniformNumber" : "11"
+		},	
+		{ "name" : "Marcelo",
+		  "position" : "DF",
+		  "birth" : "1988.05.12",
+		  "uniformNumber" : "12"
+		},	
+		{ "name" : "Luka Modrić",
+		  "position" : "MF",
+		  "birth" : "1985.09.09",
+		  "uniformNumber" : "19"
+		},	
+		{ "name" : "Isco",
+		  "position" : "MF",
+		  "birth" : "1992.04.21",
+		  "uniformNumber" : "22"
+		}																
+	]

@@ -40,7 +40,6 @@ print(data.text)
 
 # json으로 data file loading
 result = json.loads(data.text)
-result1 = dict(result) # dict형식으로 변환
 
 # 결과에 대한 최상위값
 root = result["channel"]
@@ -52,4 +51,11 @@ print(item)
 # DataFrame 처리
 df = pd.DataFrame(item, columns=["address", "category", "title"])
 
+print(df)
+
+div()
+root = result1["channel"]["item"]
+print(root)
+
+df = pd.DataFrame(root, columns=["address", "category", "title"])
 print(df)

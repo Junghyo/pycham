@@ -73,3 +73,4 @@ print(a)
 # DataFrame 만들기
 df = pd.DataFrame(a, columns=cols)
 print(df)
+
