@@ -27,17 +27,12 @@ import pandas as pd
     key를 기준으로 정렬수행  
 """
 
-stock1 = {
-    "name": ["daum", "naver", "nexen", "nc"],
-    "2017-07-28": [2000, 3000, 4000, 5000],
-    "2017-07-31": [1111, 2222, 3333, 4444]
-}
-
-stock2 = {
-    "name": ["daum", "naver", "nexen"],
-    "2017-08-01": [9999, 8888, 7777],
-    "2017-08-02": [1234, 5678, 4321]
-}
+stock1 ={'name':['다음','네이버','넥슨','NC'],
+         '2017-07-28':[84900,818000,1756,292000],
+         '2017-07-31':[86100,871000,1776,295000] }
+stock2 ={'name':['다음','네이버','넥슨','KT'],
+         '2017-08-01':[90800,766000,1695,300000],
+         '2017-08-02':[90600,806000,1703,320000] }
 
 # DataFrame
 df1 = pd.DataFrame(stock1, columns=["name", "2017-07-28", "2017-07-31"])
@@ -62,3 +57,27 @@ print(pd.merge(df1, df2, how="left"))
 div()
 print(pd.merge(df1, df2, how="right"))
 
+## 데이터 한쪽에 없는 컬럼도 출력할려면 outer join(완전외부조인) 필요
+## how = "outer" left/right
+result = df1.merge(df2, on='name', how='outer')
+print("="*20)
+print(result)
+
+## 특정한 컬럼을 index로 설정하는 경우..해당컬럼은 삭제..
+print("="*20)
+print(result['name'])
+
+div()
+result.index = result['name']
+print(result)
+
+## 컬럼의 삭제..
+div()
+result = result.drop('name', axis=1)
+print(result)
+
+## 행열 바꾸어 처리..
+div()
+
+result = result.T
+print(result)

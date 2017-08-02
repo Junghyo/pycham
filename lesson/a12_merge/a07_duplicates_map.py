@@ -50,3 +50,12 @@ print(df)
 # map(함수명)
 df["인사말"] = df["인사말"].map(func)
 print(df)
+
+
+div()
+print(df.duplicated())
+# 0    False
+# 1    False
+# 2    False
+# 3     True
+# dtype: bool

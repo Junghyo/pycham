@@ -41,5 +41,13 @@ df = pd.DataFrame(stock, index=["다음", "넥슨", "NC"])
 print(df)
 
 div()
-df.reindex = ["daum", "nexen", "NC"]
-print(df)
+
+# index 변경
+
+# df.index = ["daum", "nexen", "NC"]
+df1 = df.rename(index={'다음':'DAUM','넥슨':'NEXON'})
+print(df1)
+
+# replace
+print(df1.replace(np.nan, "-"))
+
