@@ -1,0 +1,6 @@
+http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy
+numpy‑1.13.1+mkl‑cp36‑cp36m‑win32.whl 다운
+c:\python\lib 로 copy
+
+python -m pip install [whl 파일의 경로]
+python -m pip install  c:\python\lib\numpy-1.13.1+mkl-cp36-cp36m-win32.whl
