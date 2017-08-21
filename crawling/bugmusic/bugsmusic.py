@@ -117,7 +117,8 @@ for y in range(2006, 2018):
                     )
                     cursor = con.cursor()
                     for i in range(0, 100):
-                        cursor.execute("INSERT INTO BUGSCHART VALUES(%s, %s, %s, %s)" % (timeStamp, (i+1), str(artists[i]), titles[i]))
+                        print(i)
+                        cursor.execute("INSERT INTO BUGSCHART VALUES(%s, %s, %s, %s)" % (str(timeStamp), str((i+1)), str(artists[i]), str(titles[i])))
                     con.commit()
                 except:
                     print("error", sys.exc_info())
@@ -131,7 +132,7 @@ for y in range(2006, 2018):
             # 위에서 일부러 발생한 error 표시
             except NotImplementedError as notImplemented:
                 print(timeStamp+": artist, title 순위 불일치")
-            # 웹페이지 자체 에로로 top100이 아니면 index error 표시
+            # 웹페이지 자체 에러로 top100이 아니면 index error 표시
             except IndexError as index:
                 print(timeStamp+": index Error "+str(len(titles)))
 
