@@ -43,35 +43,24 @@ try:
     cursor = con.cursor()
     # cursor.execute("INSERT INTO DEPT VALUES('40', '발령대기', '경기 성남') ")
     # con.commit()
-    cursor.execute("SELECT id, date FROM totalzen")
+    cursor.execute("SELECT * FROM cetizen WHERE ID=10239821")
     # 첫번째 행만
     # data = cursor.fetchone()
     # print(data)
     # for i in data:
     #     print(i)
-    48
+
     # 모든 데이터
     l1 = []
     data = cursor.fetchall()
-    c_id = 10000037
     for i in data:
-        if (i[0] - c_id > 2000):
-            c_id = i[0]
-            print(i[1])
-            cursor.execute("SELECT max(id), min(id) FROM totalzen WHERE date = '%s'" % i[1])
-            data = cursor.fetchall()
-            for y in data:
-                print(y)
+        l1.append(i)
 
-            # print(i[1]
 except:
     print("excpetion", sys.exc_info())
 
 finally:
     con.close()
 
-
-
-
-div()
-
+l = list(data)
+print(l)

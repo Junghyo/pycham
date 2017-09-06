@@ -20,6 +20,9 @@ import threading
 import sys
 import re
 import datetime, time
+from multiprocessing import Process
+import pymysql as pms
+
 
 class crawlThread(threading.Thread):
     ids = []
@@ -41,6 +44,7 @@ class crawlThread(threading.Thread):
     def run(self):
         print("Starting"+self.getName())
         self.crawl()
+        self.mariaDB()
 
     def crawl(self):
         for no in range(self.startno, self.endno):
@@ -52,6 +56,7 @@ class crawlThread(threading.Thread):
             try:
                 try:
                     date = soup.find(name="span", attrs={"class":"p12 ls-0"}).text
+                    date = date[1:11]
                 except AttributeError as datesError:
                     date = "N/A"
                 # models
@@ -62,6 +67,7 @@ class crawlThread(threading.Thread):
                 # prices
                 try:
                     price = soup.find(name="span", attrs={"class":"clr03 p21"}).text
+                    price = re.sub('[^0-9]', "", price)
                 except AttributeError as pricesError:
                     price = "N/A"
                 # contracts
@@ -72,6 +78,7 @@ class crawlThread(threading.Thread):
                 # agencies
                 try:
                     agency = soup.find(name="li", attrs={"class":"viewright_box_wide clr04"}).text
+                    agency = str.replace(agency, "\xa0", "")
                 except AttributeError as agenciesError:
                     agency = "N/A"
                 # guarantees
@@ -126,13 +133,41 @@ class crawlThread(threading.Thread):
         print(len(self.conditions))
         print(self.components)
         print(len(self.components))
+
     def getdata(self):
-        return self.ids, self.dates, self.models
+        return (self.ids, self.dates, self.models, self.prices, self.contracts, self.agencies, self.guarantees, self.changes, self.conditions, self.components)
+
+    def mariaDB(self):
+        try:
+            con = pms.connect(host="localhost",
+                              port=3306,
+                              user="root",
+                              password="1234",
+                              db="test",
+                              charset="UTF8")
+            cursor = con.cursor()
+            for i in range(0, len(self.ids)):
+                cursor.execute("INSERT INTO CETIZEN VALUES('%d', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')" %
+                               (self.ids[i], self.dates[i], self.models[i], self.prices[i], self.contracts[i], self.agencies[i], self.guarantees[i], self.changes[i], self.conditions[i], self.components[i]))
+            con.commit()
+            print("success")
+        except:
+            print("error", sys.exc_info())
+            con.rollback()
+        finally:
+            con.close()
 
 
 
-t1 = crawlThread(17391094, 17391114, 1)
+
+
+t1 = crawlThread(17392053, 17400305, 1)
+t2 = crawlThread(17400305, 17408557, 2)
+t3 = crawlThread(17408557, 17416812, 3)
+t4 = crawlThread(17408557, 17416812, 4)
 t1.start()
+t2.start()
+t3.start()
 
 
 
